@@ -1,5 +1,7 @@
 # Personal CV Website with Admin & User Panel
 
+hudaenessonmez.com
+
 This project is a personal CV website that allows users to contact me and leave references or feedback. Additionally, as the admin, I can respond to these interactions through a dedicated admin panel. The site showcases my skills, experiences, and projects in a user-friendly interface.
 
 ## Technologies Used
