@@ -1,0 +1,34 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Index", "ContactSubplace", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-description">Bana Ulaşın'ı Düzenle</p>
+                <form class="forms-sample">
+                    @Html.HiddenFor(x => x.ContactId)
+                    @Html.Label("Başlık")
+                    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                    <br />
+                    @Html.Label("Mail")
+                    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+                    <br />
+                    @Html.Label("Telefon")
+                    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+                    <br />
+                    @Html.Label("Açıklama")
+                    @Html.TextAreaFor(x => x.Description, 10, 3, new { @class = "form-control" })
+                    <br />
+                    <button class="btn btn-primary"> Bana Ulaş Metinlerini Güncelle </button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+@await Component.InvokeAsync("ContactDetails")
+<br />

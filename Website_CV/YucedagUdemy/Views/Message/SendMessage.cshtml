@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.WriterMessage
+@{
+    ViewData["Title"] = "SendMessage";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <p class="card-description">Mesaj Gönder</p>
+
+            @using (Html.BeginForm("SendMessage", "Message", FormMethod.Post))
+            {
+
+                @Html.Label("Kime :")
+                @Html.TextBoxFor(x => x.Receiver, new { @class = "form-control" })
+                <br />
+                @Html.Label("Konu :")
+                @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+                <br />
+                @Html.Label("Mesaj")
+                @Html.TextAreaFor(x => x.Content, 5, 3, new { @class = "form-control" })
+                <br />
+                <button class="btn btn-primary"> İlet</button>
+
+            }
+
+            <br />
+            <a href="/Message/RecievedMessage/" class="btn btn-danger" style="width:100px">Geri Dön</a>
+        </div>
+    </div>
+</div>

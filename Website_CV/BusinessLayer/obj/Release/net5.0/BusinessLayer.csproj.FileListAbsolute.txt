@@ -1,0 +1,17 @@
+C:\Projeler\YucedagUdemy\BusinessLayer\bin\Release\net5.0\BusinessLayer.deps.json
+C:\Projeler\YucedagUdemy\BusinessLayer\bin\Release\net5.0\BusinessLayer.dll
+C:\Projeler\YucedagUdemy\BusinessLayer\bin\Release\net5.0\BusinessLayer.pdb
+C:\Projeler\YucedagUdemy\BusinessLayer\bin\Release\net5.0\DataAccessLayer.dll
+C:\Projeler\YucedagUdemy\BusinessLayer\bin\Release\net5.0\EntityLayer.dll
+C:\Projeler\YucedagUdemy\BusinessLayer\bin\Release\net5.0\DataAccessLayer.pdb
+C:\Projeler\YucedagUdemy\BusinessLayer\bin\Release\net5.0\EntityLayer.pdb
+C:\Projeler\YucedagUdemy\BusinessLayer\obj\Release\net5.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Projeler\YucedagUdemy\BusinessLayer\obj\Release\net5.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projeler\YucedagUdemy\BusinessLayer\obj\Release\net5.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Projeler\YucedagUdemy\BusinessLayer\obj\Release\net5.0\BusinessLayer.AssemblyInfo.cs
+C:\Projeler\YucedagUdemy\BusinessLayer\obj\Release\net5.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Projeler\YucedagUdemy\BusinessLayer\obj\Release\net5.0\Business.EA331CBA.Up2Date
+C:\Projeler\YucedagUdemy\BusinessLayer\obj\Release\net5.0\BusinessLayer.dll
+C:\Projeler\YucedagUdemy\BusinessLayer\obj\Release\net5.0\refint\BusinessLayer.dll
+C:\Projeler\YucedagUdemy\BusinessLayer\obj\Release\net5.0\BusinessLayer.pdb
+C:\Projeler\YucedagUdemy\BusinessLayer\obj\Release\net5.0\ref\BusinessLayer.dll

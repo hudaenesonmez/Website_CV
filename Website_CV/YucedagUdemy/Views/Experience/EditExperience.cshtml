@@ -1,0 +1,38 @@
+﻿@model EntityLayer.Concrete.Experience
+@{
+    ViewData["Title"] = "EditExperience";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Deneyim Düzenle</h3>
+</div>
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+@using (Html.BeginForm("EditExperience", "Experience", FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.ExperienceId)
+    @Html.Label("Deneyim Adı")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlığı")
+    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Resim Yolu")
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Description, 10, 3, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-success"> Kaydet</button>
+    
+}
+        </div>
+    </div>
+</div>
+
+<a href="/Experience/Index" class="btn btn-danger">Geri Dön</a>
+<br />
+
+

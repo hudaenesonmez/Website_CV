@@ -1,0 +1,80 @@
+﻿@using EntityLayer.Concrete
+@model List<Announcement>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+@{string color="";}
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <!-- Card header -->
+            <div class="card-header border-0">
+                <h3 class="mb-0">Duyurular</h3>
+            </div>
+            <!-- Light table -->
+            <div class="table-responsive">
+                <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col" class="sort" data-sort="name">#</th>
+                            <th scope="col" class="sort" data-sort="budget">Başlık</th>
+                            <th scope="col" class="sort" data-sort="status">Tarih</th>
+                            <th scope="col">Durum</th>
+                            <th scope="col" class="sort" data-sort="completion">İçerik</th>
+                        </tr>
+                    </thead>
+                    <tbody class="list">
+                        @foreach (var item in Model)
+                        {
+                            if (item.Status=="Duyuru")
+                            {
+                                color = "bg-success";
+                            }
+                            if (item.Status == "Davet")
+                            {
+                                color = "bg-warning";
+                            }
+                            if (item.Status == "Danger")
+                            {
+                                color = "bg-danger";
+                            }
+                            <tr>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">@item.ID</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <td class="budget">
+                                    @item.Title
+                                </td>
+                                <td>
+                                    @(((DateTime)@item.Date).ToString("dd-MMM-yyyy"))
+                                </td>
+                                <td>
+                                    <span class="badge badge-dot mr-4">
+                                        <i class="@color"></i>
+                                        <span class="status">@item.Status</span>
+                                    </span>
+                                </td>
+                                <td><a href="/Writer/Default/AnnouncementDetails/@item.ID" class="btn btn-sm btn-neutral">Detaylar</a></td>
+         
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- Card footer -->
+            <div class="card-footer py-4">
+                <nav aria-label="...">
+                    <ul class="pagination justify-content-end mb-0">
+                      
+                     
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

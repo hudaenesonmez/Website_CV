@@ -1,0 +1,34 @@
+﻿@model EntityLayer.Concrete.WriterMessage
+@{
+    ViewData["Title"] = "AdminRecievedMessageDetails";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<h1>"@Model.SenderName" İsimli Kişiden Mesaj</h1>
+<br />
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <p class="card-description">Öne Çıkanlar'ı Düzenle</p>
+            <form class="forms-sample">
+                @Html.Label("Gönderen :")
+                @Html.TextBoxFor(x => x.SenderName, new { @class = "form-control", @readonly = "readonly", @style = "color: black" })
+                <br />
+                @Html.Label("Gönderen Mail :")
+                @Html.TextBoxFor(x => x.Sender, new { @class = "form-control", @readonly = "readonly", @style = "color: black" })
+                <br />
+                @Html.Label("Konu :")
+                @Html.TextBoxFor(x => x.Subject, new { @class = "form-control", @readonly = "readonly", @style = "color: black" })
+                <br />
+                @Html.Label("Tarih :")
+                @Html.TextBoxFor(x => x.Date, new { @class = "form-control", @readonly = "readonly", @style = "color: black" })
+                <br />
+                @Html.Label("Mesaj :")
+                @Html.TextAreaFor(x => x.Content, 5, 3, new { @class = "form-control", @readonly = "readonly", @style = "color: black" })
+            </form>
+        </div>
+    </div>
+</div>
+<br />
+<a href="/Message/RecievedAdminMessages" class="btn btn-sm btn-danger">Geri Dön</a>
+<a href="#" class="btn btn-sm btn-warning">Yanıtla</a>

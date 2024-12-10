@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "AddSkill";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Yetenek Ekleme</h3>
+</div>
+<div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <form class="form-group" method="post">
+                <label>Yetenek Adı:</label>
+                <br />
+                <input type="text" name="Title" class="form-control"/>
+                <br />
+                <label>Değer : </label>
+                <br />
+                <input type="text" name="Value" class="form-control"/>
+                <br /> <br />
+                <button class="btn btn-primary">Kaydet</button>
+                </form>
+        </div>
+    </div>
+</div>
+
+<a  href="/Skill/Index" class="btn btn-danger">Geri Dön</a>

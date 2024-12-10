@@ -1,0 +1,58 @@
+﻿@using EntityLayer.Concrete
+@model List<Announcement>
+@{
+    string color = "";
+    string icon = "";
+}
+
+<li class="nav-item dropdown">
+    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="ni ni-bell-55"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
+        <!-- Dropdown header -->
+        <div class="px-3 py-3">
+            <h6 class="text-sm text-muted m-0">Mevcut <strong class="text-primary">@Model.Count()</strong> Bildirim Var</h6>
+        </div>
+        <!-- List group -->
+        <div class="list-group list-group-flush">
+            @foreach(var item in Model)
+            {
+                if (item.Status == "Duyuru")
+                {
+                    color = "icon icon-shape bg-gradient-green text-white rounded-circle shadow";
+                    icon = "ni ni-bell-55";
+                }
+                if (item.Status == "Davet")
+                {
+                    color = "icon icon-shape bg-gradient-yellow text-white rounded-circle shadow";
+                    icon = "ni ni-email-83";
+                }
+                if (item.Status == "Event")
+                {
+                    color = "icon icon-shape bg-gradient-red text-white rounded-circle shadow";
+                    icon = "ni ni-calendar-grid-58";
+                }
+            <a href="/Writer/Default/AnnouncementDetails/@item.ID" class="list-group-item list-group-item-action">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <div class="@color">
+                            <i class="@icon"></i>
+                        </div>
+                </div>
+                    <div class="col ml--2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h4 class="mb-0 text-sm">@item.Title </h4>
+                            </div>
+                        </div>
+                        <p class="text-sm mb-0">@item.Status</p>
+                    </div>
+                </div>
+            </a>
+            }
+        </div>
+        <!-- View all -->
+        <a href="/Writer/Default/Index" class="dropdown-item text-center text-primary font-weight-bold py-3">Tüm Duyurulara Göz At</a>
+    </div>
+</li>

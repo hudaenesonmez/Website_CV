@@ -1,0 +1,29 @@
+﻿@model EntityLayer.Concrete.Message
+@{
+    ViewData["Title"] = "ContactMessageDetail";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<h1>"@Model.Name" İsimli Kişiden Mesaj</h1>
+<br />
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <p class="card-description">Öne Çıkanlar'ı Düzenle</p>
+            <form class="forms-sample">
+                @Html.Label("Gönderen :")
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @readonly="readonly", @style="color: black"})
+                <br />
+                @Html.Label("Gönderen Mail :")
+                @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", @readonly = "readonly", @style = "color: black" })
+                <br />
+                @Html.Label("Mesaj :")
+                @Html.TextAreaFor(x => x.Content, 5, 3, new { @class = "form-control", @readonly = "readonly", @style = "color: black" })
+            </form>
+        </div>
+    </div>
+</div>
+<br />
+<a href="/Contact/ContactList" class="btn btn-sm btn-danger">Geri Dön</a>
+<a href="/Contact/ContactList" class="btn btn-sm btn-warning">Yanıtla</a>
+

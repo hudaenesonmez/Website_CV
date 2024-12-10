@@ -1,0 +1,22 @@
+﻿@model EntityLayer.Concrete.Announcement
+
+@{
+
+    ViewData["Title"] = "AnnouncementDetails";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<h1>@Model.Title Adlı Duyurunun Detayları</h1>
+<br />
+<div class="table-responsive">
+    <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+          <form class="form-group">
+              @Html.Label("Duyurunun İçeriği :")
+                @Html.TextAreaFor(x => x.Content, 5, 3, new { @class = "form-control", @readonly = "readonly" })
+          </form>
+    </table>
+</div>
+<br />
+<a href="/Writer/Default/Index" class="btn btn-sm btn-dark">Geri Dön</a>
+

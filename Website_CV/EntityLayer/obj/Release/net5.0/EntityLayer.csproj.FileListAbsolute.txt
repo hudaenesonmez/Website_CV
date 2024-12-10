@@ -1,0 +1,15 @@
+C:\Projeler\YucedagUdemy\EntityLayer\bin\Release\net5.0\EntityLayer.deps.json
+C:\Projeler\YucedagUdemy\EntityLayer\bin\Release\net5.0\EntityLayer.runtimeconfig.json
+C:\Projeler\YucedagUdemy\EntityLayer\bin\Release\net5.0\EntityLayer.runtimeconfig.dev.json
+C:\Projeler\YucedagUdemy\EntityLayer\bin\Release\net5.0\EntityLayer.dll
+C:\Projeler\YucedagUdemy\EntityLayer\bin\Release\net5.0\EntityLayer.pdb
+C:\Projeler\YucedagUdemy\EntityLayer\obj\Release\net5.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Projeler\YucedagUdemy\EntityLayer\obj\Release\net5.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projeler\YucedagUdemy\EntityLayer\obj\Release\net5.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Projeler\YucedagUdemy\EntityLayer\obj\Release\net5.0\EntityLayer.AssemblyInfo.cs
+C:\Projeler\YucedagUdemy\EntityLayer\obj\Release\net5.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Projeler\YucedagUdemy\EntityLayer\obj\Release\net5.0\EntityLayer.dll
+C:\Projeler\YucedagUdemy\EntityLayer\obj\Release\net5.0\refint\EntityLayer.dll
+C:\Projeler\YucedagUdemy\EntityLayer\obj\Release\net5.0\EntityLayer.pdb
+C:\Projeler\YucedagUdemy\EntityLayer\obj\Release\net5.0\EntityLayer.genruntimeconfig.cache
+C:\Projeler\YucedagUdemy\EntityLayer\obj\Release\net5.0\ref\EntityLayer.dll

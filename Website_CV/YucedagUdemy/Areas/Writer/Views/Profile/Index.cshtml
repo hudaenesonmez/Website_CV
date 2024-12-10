@@ -1,0 +1,57 @@
+﻿@model YucedagUdemy.Areas.Writer.Models.UserEditViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+<!-- Page content -->
+<div>
+    <div>
+            <form method="post" enctype="multipart/form-data">
+                        <h6 class="heading-title text-muted mb-10 text-bold">Profiliniz</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Ad</label>
+                                        <input type="text" asp-for="Name" class="form-control" placeholder="Ad" >
+                                    </div>
+                                            </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Soyad</label>
+                                        <input type="text" asp-for="Surname" id="input-username" class="form-control" placeholder="Soyad">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-email">Şifre</label>
+                                        <input type="password" asp-for="Password"  class="form-control" placeholder="Şifreniz...">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-email">Şifre Tekrar</label>
+                                        <input type="password"  asp-for="ConfirmPassword" class="form-control" placeholder="Şifrenizi Onaylayın...">
+                                    </div>
+                        </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-first-name">Resim Yükle</label>
+                                        <input type="file" asp-for="Picture" class="file-upload-info">
+                                        
+                                    </div>
+                               </div>
+                        </div>
+                <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
+                <button class="btn btn-light">İptal</button>
+                        </div>
+                       
+        </form>
+        
+ 
+  
+</div>
+  </div>
+

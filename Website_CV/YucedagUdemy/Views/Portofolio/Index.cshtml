@@ -1,0 +1,49 @@
+﻿@using EntityLayer.Concrete
+@model List<Portofolio>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Projelerim</h4>
+            <p class="card-description">
+            </p>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th> Proje Adı </th>
+                            <th> Platform </th>
+                            <th> Durum </th>
+                            <th> Görseller </th>
+                            <th> Düzenle </th>
+                            <th> Sil </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in Model)
+                        {
+                        <tr>
+                            <td class="py-1">
+                                <img src="@item.PlatformLogoUrl" alt="image" />
+                            </td>
+                            <td> @item.Name </td>
+                            <td>
+                                @item.Platform
+                            </td>
+                            <td> Tamamlandı </td>
+                            <td> <a href="/Portofolio/EditPortfolio/@item.PortofolioId" class="btn btn-primary">Düzenle</a> </td>
+                                <td> <a href="/Portofolio/DeletePortfolio/@item.PortofolioId" class="btn btn-danger">Sil</a> </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="/Portofolio/AddPortfolio" class="btn btn-info">Yeni Proje Ekle</a>

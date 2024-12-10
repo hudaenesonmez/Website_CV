@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.WriterMessage
+
+@{
+    ViewData["Title"] = "SendedMessageDetails";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<h1>"@Model.Subject" Başlıklı Mesaj</h1>
+<br />
+<div class="table-responsive">
+    <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+            <form class="form-group">
+                @Html.Label("Kime :")
+                @Html.TextBoxFor(x => x.ReceiverName, new { @class = "form-control", @readonly = "readonly" })
+                <br />
+                @Html.Label("Mail :")
+                @Html.TextBoxFor(x => x.Receiver, new { @class = "form-control", @readonly = "readonly" })
+                <br />
+                @Html.Label("Mesaj :")
+                @Html.TextAreaFor(x => x.Content, 5, 3, new { @class = "form-control", @readonly = "readonly" })
+            </form>
+    </table>
+</div>
+<br />
+<a href="/Writer/Message/SendedMessage" class="btn btn-sm btn-dark">Geri Dön</a>
+

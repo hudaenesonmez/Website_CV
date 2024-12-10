@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+<div class="row">
+    <div class="col-xl-6 col-md-6">
+        <div class="card card-stats">
+            <h1>Merhaba @ViewBag.N !</h1>
+            <h4>Asp.Net Core Yazar Panelindesin. Duyuruları Okumak İçin <span class="text-primary"><a href="/Writer/Default/Index/">Hemen Tıkla !</a></span></h4>
+        </div>
+    </div>
+    <div class="col-xl-6 col-md-6">
+        <div class="card card-stats">
+            <h1>Tarih</h1>
+            <h3>@DateTime.Today.ToShortDateString()</h3>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xl-3 col-md-6">
+        <div class="card card-stats">
+            <!-- Card body -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">Hava Durumu</h5>
+                        <span class="h2 font-weight-bold mb-0" id="city-name">Istanbul, TR</span>
+                        <div class="mt-2">
+                            <span class="h3 font-weight-bold" id="temperature">@ViewBag.w °C</span>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">
+                            <i class="ni ni-umbrella-13"></i>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card card-stats">
+            <!-- Card body -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">Mesajlar</h5>
+                        <span class="h2 font-weight-bold mb-0">Gelen</span>
+                        <div class="mt-2">
+                            <span class="h3 font-weight-bold">@ViewBag.d1</span>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                            <i class="ni ni-email-83"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card card-stats">
+            <!-- Card body -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">Duyurular</h5>
+                        <span class="h2 font-weight-bold mb-0">Tümü</span>
+                        <div class="mt-2">
+                            <span class="h3 font-weight-bold">@ViewBag.d2</span>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="icon icon-shape bg-gradient-purple text-white rounded-circle shadow">
+                            <i class="ni ni-bell-55"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card card-stats">
+            <!-- Card body -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">Üye Sayısı</h5>
+                        <span class="h2 font-weight-bold mb-0">Toplam</span>
+                        <div class="mt-2">
+                            <span class="h3 font-weight-bold">@ViewBag.d3</span>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="icon icon-shape bg-gradient-yellow text-white rounded-circle shadow">
+                            <i class="ni ni-chart-bar-32"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

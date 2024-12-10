@@ -1,0 +1,29 @@
+﻿@model EntityLayer.Concrete.WriterMessage
+@{
+    ViewData["Title"] = "SendMessage";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<h1>Mesaj Gönder</h1>
+<br />
+<div class="table-responsive">
+    <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+            <form class="form-group" method="post">
+                @Html.Label("Alıcı Mail :")
+                @Html.TextBoxFor(x => x.Receiver, new { @class = "form-control"})
+                <br />
+                @Html.Label("Başlık :")
+                @Html.TextBoxFor(x => x.Subject, new { @class = "form-control"})
+                <br />
+                @Html.Label("Mesaj :")
+                @Html.TextAreaFor(x => x.Content, 5, 3, new { @class = "form-control" })
+                <br />
+                <button class="btn btn-group-lg btn-success">Gönder</button>
+            </form>
+    </table>
+</div>
+<br />
+<button type="button" onclick="window.location.href='/Writer/Message/SendedMessage'" class="btn btn-sm btn-dark">Geri Dön</button>
+
+
